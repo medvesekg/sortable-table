@@ -1,8 +1,14 @@
 Vue.component('sortable-table', {
     
     props: {
-        columns: Array,
-        rows: Array
+        columns: {
+            type: Array,
+            required: true
+        },
+        rows: {
+            type: Array,
+            required: true
+        }
     },
     
     

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Sortable Table</title>
+
+    <style>
+
+        #app {
+            margin: 100px auto;
+            max-width: 500px;
+        }
+
+        th {
+            cursor: pointer;
+            user-select: none;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <div id="app">
+
+        <sortable-table :columns="columns" :rows="rows">
+
+        </sortable-table>
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+<script src="SortableTable.js"></script>
+<script>
+
+let vm = new Vue({
+
+    data() {
+
+        return {
+            columns: [
+                {name: 'Column1',type: 'Integer'},
+                {name: 'Column2',type: 'String'},
+                {name: 'Column3',type: 'String'},
+                {name: 'Column4',type: 'Integer'},
+            ],
+
+            rows: [
+                [3, "Z", "Boo", 17],
+                [15, "G", "Foo", 365],
+                [7, "H", "Zoo", 0],
+                [19, "O", "Aoo", 123],
+            ]
+        }
+
+    },
+
+    el: "#app"
+});
+
+</script>
+    
+</body>
+</html>

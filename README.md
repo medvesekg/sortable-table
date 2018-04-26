@@ -23,3 +23,5 @@ let rows = [
   ['foo', 'bar']
 ];
 ```
+
+Uses bootstrap 4 and font awesome for styling.
